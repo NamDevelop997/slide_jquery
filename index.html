@@ -18,27 +18,28 @@
     </style>
   </head>
   <body>
-    <div class="box">box</div>
-
     <a href="#" class="slideUp">SlideUp</a>
     <a href="#" class="slideDown">SlideDown</a>
     <a href="#" class="slideToggle">SlideToggle</a>
+    <div class="box">box</div>
+
+  
 
     <script src="./js/jquery.js"></script>
 
     <script>
         $(function() {
             $(".slideUp").click(function() {
-                $(".box").slideUp(400);
+                $(".box").stop().slideUp(400);
             });
 
             $(".slideDown").click(function() {
-                $(".box").slideDown(400);
+                $(".box").stop().slideDown(400);
             });
 
             
             $(".slideToggle").click(function() {
-                $(".box").slideToggle(1000);
+                $(".box").stop().slideToggle(1000);
             });
            
         });
