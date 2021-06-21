@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slide in jquery</title>
+    <style>
+      .box {
+        width: 400px;
+        height: 200px;
+        background: red;
+        /* display: none; */
+      }
+      a{
+        margin-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">box</div>
+
+    <a href="#" class="slideUp">SlideUp</a>
+    <a href="#" class="slideDown">SlideDown</a>
+    <a href="#" class="slideToggle">SlideToggle</a>
+
+    <script src="./js/jquery.js"></script>
+
+    <script>
+        $(function() {
+            $(".slideUp").click(function() {
+                $(".box").slideUp(400);
+            });
+
+            $(".slideDown").click(function() {
+                $(".box").slideDown(400);
+            });
+
+            
+            $(".slideToggle").click(function() {
+                $(".box").slideToggle(1000);
+            });
+           
+        });
+    </script>
+  </body>
+</html>
